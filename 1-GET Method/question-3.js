@@ -8,3 +8,19 @@
 // const article = document.querySelector("article");
 
 // ! Answer
+async function cards() {
+try {
+    const data= await axios('https://jsonplaceholder.typicode.com/users');
+    console.log(data.id);
+    
+      // for (const element of data.id) {
+          
+      // }
+    const names= data.name;
+    const companyName=data.username;  
+} catch (error) {
+    
+}
+}
+
+cards();
