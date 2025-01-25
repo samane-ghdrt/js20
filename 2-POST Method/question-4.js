@@ -3,21 +3,21 @@
 
 // !POST
 //?1-Imagine you are CTO of a company, and you want to add three people of your family (pull strings :) ) so you have to use 'POST Method' to add these people that are in given array to the MockAPI.
-// const users = [
-//     {
-//         firstName: "Grattan",
-//         lastName: "Dalton"
-//     },
-//     {
-//         firstName: "William",
-//         lastName: "Dalton"
-//     },
-//     {
-//         firstName: "Robert",
-//         lastName: "Dalton"
-//     },
+const users = [
+    {
+        firstName: "Grattan",
+        lastName: "Dalton"
+    },
+    {
+        firstName: "William",
+        lastName: "Dalton"
+    },
+    {
+        firstName: "Robert",
+        lastName: "Dalton"
+    },
 
-// ];
+];
 
 /** WRITE YOUR CODE BELOW DOWN */
 
@@ -27,3 +27,23 @@
 /** WRITE YOUR CODE BELOW DOWN */
 
 //*To be continue...
+users.forEach(user => {
+    
+
+const url="https://mockapi.io/";
+const formEl=document.querySelector('form');
+
+formEl.addEventListener("submit",async (e)=>{
+    e.preventDefault();
+    const data={
+    
+    }
+    axios(url,{
+        method:"POST",
+        headers: {
+            "Content-Type": "application/json",
+          },
+          body:data,
+    });
+})
+});

@@ -12,3 +12,14 @@
 
 //*End of story :)
 
+const formDelete = document.querySelector("#delete");
+
+formDelete.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const APIPUT = `https://679285f2cf994cc6804a5088.mockapi.io/users/${event.target.id.value}`;
+
+  fetch(APIPUT, {
+    method: "DELETE",
+  });
+});

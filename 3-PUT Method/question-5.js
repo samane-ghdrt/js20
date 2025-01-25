@@ -13,3 +13,24 @@
 
 
 //*To be continue...
+const formPut = document.querySelector("#put");
+
+formPut.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const APIPUT = `https://679285f2cf994cc6804a5088.mockapi.io/users/${event.target.id.value}`;
+
+  const data = {
+    firstName: event.target.firstName.value,
+    lastName: event.target.lastName.value,
+    avatar: event.target.avatar.value,
+    city: event.target.city.value,
+  };
+  fetch(APIPUT, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+});
