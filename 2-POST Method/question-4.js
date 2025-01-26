@@ -59,6 +59,9 @@ async function cards() {
     // cardEl.append(phoneEl);
     nameEl.textContent=element.firstname;
     lastNameEl.textContent=element.lastname;
+    const idElement = document.createElement("h3");
+cardEl.append(idElement);
+idElement.textContent=element.id;
     // phoneEl.textContent=element.phone;
     cardEl.style.display = "flex";
     cardEl.style.justifyContent = "center";
