@@ -70,7 +70,7 @@ formPut.addEventListener("submit", async (event) => {
     firstName: event.target.fName.value,
     lastName: event.target.lName.value,
   };
-  fetch(APIPUT, {
+  await fetch(APIPUT, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

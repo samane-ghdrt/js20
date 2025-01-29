@@ -62,7 +62,7 @@ formDelete.addEventListener("submit", async (event) => {
 
   const APIPUT = `https://679285f2cf994cc6804a5088.mockapi.io/users/${event.target.id.value}`;
 
-  fetch(APIPUT, {
+  await fetch(APIPUT, {
     method: "DELETE",
   });
 });

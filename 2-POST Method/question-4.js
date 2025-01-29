@@ -39,7 +39,9 @@ async function cards() {
         const data= await axios(url);
         const data1=await data.data;  
         data1.forEach(element => {
-          makeUserData(element)
+            console.log(element);
+            
+          makeUserData(element);
          });
          return data1;
     } catch (error) {
@@ -57,8 +59,8 @@ async function cards() {
     cardEl.append(nameEl);
     cardEl.append(lastNameEl);
     // cardEl.append(phoneEl);
-    nameEl.textContent=element.firstname;
-    lastNameEl.textContent=element.lastname;
+    nameEl.textContent=element.firstName;
+    lastNameEl.textContent=element.lastName;
     const idElement = document.createElement("h3");
 cardEl.append(idElement);
 idElement.textContent=element.id;
@@ -83,8 +85,8 @@ formEl.addEventListener("submit",async (e)=>{
     firstName:e.target.fName.value,
     lastName:e.target.lName.value,
 
-    }
-    axios(url,{
+    };
+      await axios(url,{
         method:"POST",
         headers: {
             "Content-Type": "application/json",
